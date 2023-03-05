@@ -1,0 +1,36 @@
+<!-- templates/base.html -->
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>PEMS-System SUSU</title>
+    <link rel="stylesheet" href="{% static 'css/base.css'%}" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    {% block extrahead %}
+    {% endblock %}
+
+</head>
+<body id="body">
+    <div id="head">
+        <div class="dropdown">
+            <a href="{% url 'home' %}" class="menu example1"><span></span></a>
+            <div class="dropdown-content">
+                <a href="{% url 'tube1' %}">Дымовая труба №1</a>
+                <a href="{% url 'tube2' %}">Дымовая труба №2</a>
+                <a href="{% url 'tube3' %}">Дымовая труба №3</a>
+            </div>
+        </div>
+        <div class="header">PEMS-СИСТЕМА ЮУрГУ</div>
+        <div class="data-head">{{ data }}</div>
+    </div>
+
+    <div id="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/home.css'%}" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <!-- Блок ввода данных -->
+    <div class="option">
+        <!-- Название трубы -->
+        <div class="monitor" align="center">Мониторинг выбросов дымовых газов ТЭЦ</div>
+        <div class="block">
+            <span class="text">Название источника: Дымовая труба №2</span>
+        </div>
+        <!-- Выбор вещества -->
+        <div class="block">
+            <span class="text">Вещество: </span>
+            <select class="select">
+                <option value="1">NOx</option>
+                <option value="2">CO2</option>
+                <option value="3">SO2</option>
+            </select>
+        </div>
+        <!-- Загрузка данных -->
+        <div class="block">
+            <span class="text">Данные предприятия: </span>
+            <form method="post" enctype="multipart/form-data" id="upload" class="block">
+                {% csrf_token %}
+                <input type="file" name="file" class="btn-upload">
+                <button type="submit" class="btn" name="upload_phrase">Загрузить</button>
+                <span class="text">Выбранный файл: {{ file_name }}</span>
+            </form>
+        </div>
+        <!-- Период отображения графика -->
+        <div class="block">
+            <form method="POST" id="data" action="{% url 'graphic' %}" target="_blank">
+                <span class="text">Выберите период:</span>
+                {% csrf_token %}
+                <span class="text-input">Дата начала:</span>
+                {{ data_form.data_from }}
+                <span class="text-input">Время начала:</span>
+                {{ data_form.time_from }}
+                <span class="text-input">Дата конца:</span>
+                {{ data_form.data_to }}
+                <span class="text-input">Время конца:</span>
+                {{ data_form.time_to }}
+                <div class="block" align="center">
+                    <span class="text">Построить график за период: </span>
+                    <button type="submit" class="btn btn-input" name="data_phrase">Сформировать график</button>
+                </div>
+            </form>
+        </div>
+        <!-- Выгрузка данных -->
+        <div class="block" align="center">
+            <form method="POST" id="download">
+                <span class="text">Выгрузить расчетные данные: </span>
+                {% csrf_token %}
+                <button type="submit" name="download_phrase" class="btn">Выгрузить</button>
+            </form>
+        </div>
+    </div>
+    <!-- Форма настроек -->
+    <!--
+        <div class="settings">
+        <div class="text" align="center">Настройки</div>
+        <form id="none">
+        </form>
+    </div>
+    -->
+{% endblock content %}

@@ -1,0 +1,103 @@
+.monitor {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 10px 10px 10px 10px;
+}
+
+.option {
+    display:inline-block;
+    width: 100%;
+    min-width: 150px;
+    margin: 10px 10px 10px 10px;
+}
+
+.settings {
+    display:inline-block;
+    width: 60%;
+    min-width: 150px;
+    padding: 2px;
+    margin: 0px 0px 0px 10px;
+    background: white;
+    border-radius: 20px;
+}
+
+.text {
+    font-size: 30;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-input {
+    font-size: 20;
+    font-family: 'Roboto', sans-serif;
+}
+
+.block {
+    margin: 10px 5px 5px 10px;
+}
+
+.select {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #444;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+    width: 150px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+}
+
+.btn {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    width: 200px;
+    box-sizing: border-box;
+    border: none;
+    background: linear-gradient(to right, #7269FF, #C500FF);
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #0068FF, #7269FF);
+}
+
+.btn-input {
+    width: 300px;
+}
+
+.btn-upload {
+    width: 350px;
+    color: black;
+    background: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+}
+
+input {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #444;
+    padding: 10px;
+    margin: 0px 10px 0px 0px;
+    width: 150px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+}
+
+.graphic {
+    width: 100%;
+}

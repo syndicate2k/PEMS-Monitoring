@@ -1,0 +1,26 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/home.css'%}" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="graphic">
+        <div class="text" align="center">График выброса NOx (мг/м3)</div>
+        <div class="text" align="center">от {{ data1 }} до {{ data2 }}</div>
+        <div align="center">
+            <!-- mpld3 -->
+            <!-- {{ graphic | safe }} -->
+
+            <!-- matplotlib -->
+            <!-- <img src="{% static 'images/graphic.jpeg' %}"> -->
+
+            <!-- plotly -->
+            {{ graphic | safe}}
+        </div>
+        <div class="text">Максимальное значение NOx (мг/м3) за период: {{ NOxmax }}</div>
+        <div class="text">Дата и время пикового выброса: {{ datamax }}</div>
+    </div>
+{% endblock content %}

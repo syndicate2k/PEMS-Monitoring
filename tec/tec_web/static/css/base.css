@@ -1,0 +1,148 @@
+.header {
+    display: inline-block;
+    font-size: 60;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin: 10px 0px 10px 10px;
+    font-family: arial;
+}
+
+.dropdown {
+    display: inline-block;
+    float: left;
+    margin: 10px 10px 10px 10px;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px;
+}
+.menu span {
+  margin: 0 auto;
+  position: relative;
+  top: 12px;
+}
+.menu span:before,
+.menu span:after {
+  position: absolute;
+  content: "";
+}
+.menu span,
+.menu span:before,
+.menu span:after {
+  width: 30px;
+  height: 6px;
+  background-color: #000;
+  display: block;
+}
+.menu span:before {
+  margin-top: -12px;
+}
+.menu span:after {
+  margin-top: 12px;
+}
+
+.example1 {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.example1:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 20px;
+    width: 300px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.btn-head {
+    display: inline;
+    margin: 20px 10px 10px 10px;
+    float: right;
+}
+
+.btn-head button {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    width: 150px;
+    height: 50px;
+    box-sizing: border-box;
+    border: none;
+    background: white;
+    border-radius: 20px;
+}
+
+.btn-head button:hover {
+    background: #CCCCCC;
+}
+
+.data-head {
+    margin: 20px 10px 10px 10px;
+    float: right;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    height: 30px;
+    background: white;
+    border-radius: 20px;
+    display: inline;
+}
+
+#head {
+    padding: 2px;
+    flex-direction: row;
+}
+
+#body {
+    background: linear-gradient(to right, #7269FF, #C500FF);
+}
+
+#content {
+    padding: 5px;
+    border: none;
+    background: #FAFAFA;
+    border-radius: 20px;
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}

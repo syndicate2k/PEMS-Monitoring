@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/home.css'%}" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="option">
+        <div class="monitor" align="center">Мониторинг выбросов дымовых газов ТЭЦ</div>
+        <div class="block">
+            <div class="text">Приложение для визуализации кол-во выбросов</div>
+        </div>
+        <div class="block">
+            <div class="text">Трубы:</div>
+        </div>
+        <div class="block">
+            <a class="text" href="{% url 'tube1' %}">Дымовая труба №1</a>
+        </div>
+        <div class="block">
+            <a class="text" href="{% url 'tube2' %}">Дымовая труба №2</a>
+        </div>
+        <div class="block">
+            <a class="text" href="{% url 'tube3' %}">Дымовая труба №3</a>
+        </div>
+    </div>
+{% endblock content %}
